@@ -11,10 +11,12 @@
  */
 public class Picture
 {
-    private Square wall;
+    private Triangle pyramid;
+    
+    /*private Square wall;
     private Square window;
     private Triangle roof;
-    private Circle sun;
+    private Circle sun;*/
 
     /**
      * Constructor for objects of class Picture
@@ -29,7 +31,10 @@ public class Picture
      */
     public void draw()
     {
-        wall = new Square();
+        pyramid = new Triangle();
+        
+        
+        /*wall = new Square();
         wall.moveHorizontal(-140);
         wall.moveVertical(20);
         wall.changeSize(120);
@@ -53,7 +58,7 @@ public class Picture
         sun.moveHorizontal(100);
         sun.moveVertical(-40);
         sun.changeSize(80);
-        sun.makeVisible();
+        sun.makeVisible();*/
     }
 
     /**
@@ -61,13 +66,13 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        if (wall != null)   // only if it's painted already...
+        /*if (wall != null)   // only if it's painted already...
         {
             wall.changeColor("black");
             window.changeColor("white");
             roof.changeColor("black");
             sun.changeColor("black");
-        }
+        }*/
     }
 
     /**
@@ -75,12 +80,12 @@ public class Picture
      */
     public void setColor()
     {
-        if (wall != null)   // only if it's painted already...
+        /*if (wall != null)   // only if it's painted already...
         {
             wall.changeColor("red");
             window.changeColor("black");
             roof.changeColor("green");
             sun.changeColor("yellow");
-        }
+        }*/
     }
 }

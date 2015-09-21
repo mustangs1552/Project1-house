@@ -6,8 +6,10 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2011.07.31
+ * @author  Matthew George
+ * @version 9/20/15
+ * 
+ * Picture of a pyramid with obelisks, a person standing in front, and a black sun.
  */
 public class Picture
 {

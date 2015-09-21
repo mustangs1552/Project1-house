@@ -11,12 +11,14 @@
  */
 public class Picture
 {
+    private Square ground;
+    private Square lObelisk;
+    private Triangle lObeliskTip;
+    private Square rObelisk;
+    private Triangle rObeliskTip;
     private Triangle pyramid;
-    
-    /*private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;*/
+    private Circle sun;
+    private Person man;
 
     /**
      * Constructor for objects of class Picture
@@ -31,34 +33,60 @@ public class Picture
      */
     public void draw()
     {
+        ground = new Square();
+        ground.moveHorizontal(-310);
+        ground.moveVertical(160);
+        ground.changeSize(800, 200);
+        ground.changeColor("yellow");
+        ground.makeVisible();
+        
         pyramid = new Triangle();
+        pyramid.moveHorizontal(40);
+        pyramid.moveVertical(-60);
+        pyramid.changeSize(200, 300);
+        pyramid.changeColor("yellow");
+        pyramid.makeVisible();
         
-        
-        /*wall = new Square();
-        wall.moveHorizontal(-140);
-        wall.moveVertical(20);
-        wall.changeSize(120);
-        wall.makeVisible();
-        
-        window = new Square();
-        window.changeColor("black");
-        window.moveHorizontal(-120);
-        window.moveVertical(40);
-        window.changeSize(40);
-        window.makeVisible();
-
-        roof = new Triangle();  
-        roof.changeSize(60, 180);
-        roof.moveHorizontal(20);
-        roof.moveVertical(-60);
-        roof.makeVisible();
-
         sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(-40);
-        sun.changeSize(80);
-        sun.makeVisible();*/
+        sun.moveHorizontal(-13);
+        sun.moveVertical(-80);
+        sun.changeSize(68);
+        sun.changeColor("black");
+        sun.makeVisible();
+        
+        man = new Person();
+        man.moveHorizontal(20);
+        man.moveVertical(60);
+        man.changeColor("black");
+        man.makeVisible();
+        
+        lObelisk = new Square();
+        lObelisk.moveHorizontal(-225);
+        lObelisk.moveVertical(10);
+        lObelisk.changeSize(25, 150);
+        lObelisk.changeColor("yellow");
+        lObelisk.makeVisible();
+        
+        rObelisk = new Square();
+        rObelisk.moveHorizontal(80);
+        rObelisk.moveVertical(10);
+        rObelisk.changeSize(25, 150);
+        rObelisk.changeColor("yellow");
+        rObelisk.makeVisible();
+        
+        lObeliskTip = new Triangle();
+        lObeliskTip.moveHorizontal(-113);
+        lObeliskTip.moveVertical(-34);
+        lObeliskTip.changeSize(25, 25);
+        lObeliskTip.changeColor("yellow");
+        lObeliskTip.makeVisible();
+        
+        rObeliskTip = new Triangle();
+        rObeliskTip.moveHorizontal(192);
+        rObeliskTip.moveVertical(-34);
+        rObeliskTip.changeSize(25, 25);
+        rObeliskTip.changeColor("yellow");
+        rObeliskTip.makeVisible();
     }
 
     /**
@@ -66,13 +94,16 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        /*if (wall != null)   // only if it's painted already...
+        if (ground != null)   // only if it's painted already...
         {
-            wall.changeColor("black");
-            window.changeColor("white");
-            roof.changeColor("black");
-            sun.changeColor("black");
-        }*/
+            ground.changeColor("black");
+            pyramid.changeColor("black");
+            man.changeColor("white");
+            lObelisk.changeColor("black");
+            rObelisk.changeColor("black");
+            lObeliskTip.changeColor("black");
+            rObeliskTip.changeColor("black");
+        }
     }
 
     /**
@@ -80,12 +111,15 @@ public class Picture
      */
     public void setColor()
     {
-        /*if (wall != null)   // only if it's painted already...
+        if (ground != null)   // only if it's painted already...
         {
-            wall.changeColor("red");
-            window.changeColor("black");
-            roof.changeColor("green");
-            sun.changeColor("yellow");
-        }*/
+            ground.changeColor("yellow");
+            pyramid.changeColor("yellow");
+            man.changeColor("black");
+            lObelisk.changeColor("yellow");
+            rObelisk.changeColor("yellow");
+            lObeliskTip.changeColor("yellow");
+            rObeliskTip.changeColor("yellow");
+        }
     }
 }
